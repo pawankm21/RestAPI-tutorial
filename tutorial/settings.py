@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'apibasics.apps.ApibasicsConfig',
     'rest_framework',
-    'rest_framework.authtoken'
+    'rest_framework.authtoken',
     'drf_spectacular',
 
 ]
@@ -51,7 +51,12 @@ REST_FRAMEWORK = {
     ],
     "DEFAULT_SCHEMA_CLASS":"drf_spectacular.openapi.AutoSchema",
 }
-
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'APIBasics',
+    'DESCRIPTION': 'this is a test',
+    'VERSION': '1.0.0',
+    # OTHER SETTINGS
+}
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
